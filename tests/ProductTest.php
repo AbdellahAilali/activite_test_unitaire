@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use src\Product;
+use Acme\Product;
 
 class ProductTest extends TestCase
 

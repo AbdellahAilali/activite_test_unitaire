@@ -11,8 +11,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "Acme\\": "src/"
         }
     },
     "require": {}
 }
+
+Acme/product
+src/Product

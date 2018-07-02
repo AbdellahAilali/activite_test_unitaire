@@ -1,10 +1,10 @@
 <?php
 
-namespace src;
+namespace Acme;
 
 class Product
 {
-    const FOOD_PRODUCT = 'informatique';
+    const FOOD_PRODUCT = 'food';
 
     private $name;
 
@@ -25,7 +25,7 @@ class Product
             return $this->price * 0.055;
         }
 
-        return $this->price * 0.196;
+        return $this->price * 0.20;
     }
 }
 
