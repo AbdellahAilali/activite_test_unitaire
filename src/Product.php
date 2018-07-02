@@ -1,10 +1,10 @@
 <?php
 
-namespace Src\entity;
+namespace src;
 
 class Product
 {
-    const FOOD_PRODUCT = 'food';
+    const FOOD_PRODUCT = 'informatique';
 
     private $name;
 
