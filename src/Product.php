@@ -2,30 +2,30 @@
 
 namespace Acme;
 
+use Acme\Depend;
+
+
 class Product
 {
-    const FOOD_PRODUCT = 'food';
+    /**
+     * @var Depend
+     */
+    private $depend;
 
-    private $name;
-
-    private $type;
-
-    private $price;
-
-    public function __construct($name, $type, $price)
+    public function __construct(Depend $depend)
     {
-        $this->name = $name;
-        $this->type = $type;
-        $this->price = $price;
+        $this->depend = $depend;
     }
 
-    public function computeTVA()
-    {
-        if (self::FOOD_PRODUCT == $this->type) {
-            return $this->price * 0.055;
-        }
 
-        return $this->price * 0.20;
+    public function multi()
+    {
+        $test = $this->depend->add();
+
+        $result = $test *10;
+
+        return $result;
     }
+
 }
 

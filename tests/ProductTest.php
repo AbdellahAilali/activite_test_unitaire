@@ -6,13 +6,43 @@ use Acme\Product;
 class ProductTest extends TestCase
 
 {
-    public function testTVA()
+
+    public function testMock()
     {
-        $product = new Product("name", Product::FOOD_PRODUCT,10);
+        $doublure = $this->createMock(Product::class);
+
+        $doublure->method('multi')
+                 ->willReturn(8);
+
+        $this->assertSame(8, $doublure->());
+
+
+
+    }
+
+
+
+
+
+
+
+
+  /* public function testTVA()
+    {
+        $product = new Product("name", 88, 10);
+
 
         $result = $product->computeTVA();
 
-        $this->assertSame(0.55,$result);
+        $this->assertSame(2.0, $result);
     }
 
+    public function testException()
+    {
+        $product = new Product("name", Product::FOOD_PRODUCT,-1);
+        $this->expectException("\LogicException");
+        $product->computeTVA();
+    }*/
+
 }
+
