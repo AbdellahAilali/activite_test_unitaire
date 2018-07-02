@@ -1,0 +1,18 @@
+{
+    "name": "test_unitaire/tuto",
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    },
+    "authors": [
+        {
+            "name": "Abdellah Ailali",
+            "email": "abdela47@laposte.net"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {}
+}
