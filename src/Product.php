@@ -2,8 +2,6 @@
 
 namespace Acme;
 
-use Acme\Depend;
-
 
 class Product
 {
@@ -31,4 +29,3 @@ class Product
 
 
 }
-
