@@ -5,9 +5,9 @@ namespace Acme;
 
 class Depend
 {
-    public function add()
+    public function add($nb)
     {
-      return 2;
+      return $nb * 2;
     }
 
 }

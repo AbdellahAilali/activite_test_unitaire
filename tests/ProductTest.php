@@ -7,42 +7,36 @@ class ProductTest extends TestCase
 
 {
 
-    public function testMock()
+
+    public function testMulti()
     {
+
         $doublure = $this->createMock(Product::class);
 
-        $doublure->method('multi')
-                 ->willReturn(8);
+        $doublure->method('multi')->willReturn(80);
 
-        $this->assertSame(8, $doublure->());
-
+        $this->assertSame(80, $doublure->multi());
 
 
     }
 
 
+    /* public function testTVA()
+      {
+          $product = new Product("name", 88, 10);
 
 
+          $result = $product->computeTVA();
 
+          $this->assertSame(2.0, $result);
+      }
 
-
-
-  /* public function testTVA()
-    {
-        $product = new Product("name", 88, 10);
-
-
-        $result = $product->computeTVA();
-
-        $this->assertSame(2.0, $result);
-    }
-
-    public function testException()
-    {
-        $product = new Product("name", Product::FOOD_PRODUCT,-1);
-        $this->expectException("\LogicException");
-        $product->computeTVA();
-    }*/
+      public function testException()
+      {
+          $product = new Product("name", Product::FOOD_PRODUCT,-1);
+          $this->expectException("\LogicException");
+          $product->computeTVA();
+      }*/
 
 }
 
