@@ -9,7 +9,7 @@ class Comment
 
     public function __construct()
     {
-        $this->title = 'NC';
+        $this->title = "NC";
         $this->description = 'NC';
     }
 
