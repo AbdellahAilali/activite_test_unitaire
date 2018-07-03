@@ -45,8 +45,6 @@ class CommentTest extends TestCase
         $this->assertEquals($value, $description->getDescription());
     }
 
-
-
      public function testFormatTitle()
     {
         $titleFormat =  new Comment();
@@ -60,21 +58,30 @@ class CommentTest extends TestCase
         $this->assertEquals( "LE CHATEAU AMBULANT" ,$valueFormat);
     }
 
-
-
-
-
-    public function testTruncateDescription()
+    public function testTruncateDescriptionDefaultValue()
     {
         $nbCaractere = new Comment();
 
         $nbCaractere ->setDescription("bonjour je suis Cartman, je vous emmerde et je rentre à ma maison");
 
-        $nbCaractere->truncateDescription(10);
+        $nbCaractere->truncateDescription();
 
         $valueNbCaractere = $nbCaractere->getDescription();
 
         $this->assertEquals("bonjour je", $valueNbCaractere );
+    }
+
+    public function testTruncateDescription()
+    {
+        $nbCaractere =  new Comment();
+
+        $nbCaractere ->setDescription("test de description pour ");
+
+        $nbCaractere->truncateDescription(10);
+
+        $valueNbCaractere =$nbCaractere->getDescription();
+
+        $this->assertEquals("test de de", $valueNbCaractere);
     }
 
 
